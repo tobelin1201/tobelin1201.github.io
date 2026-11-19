@@ -342,3 +342,44 @@ caption { caption-side: bottom; text-align: left; padding: 10px 14px; font-size:
 .chart-table[open] summary::before { content: "▾ "; }
 .chart-table summary:hover { color: var(--text-2); }
 .chart-table .table-wrap { margin: 8px 0; }
+
+/* ==========================================================================
+   Slide deck viewer (projects/*.html with .deck)
+   ========================================================================== */
+.deck { margin: 8px 0 28px; }
+.deck-stage {
+  position: relative; background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 12px; outline: none;
+}
+.deck-stage:focus-visible { border-color: var(--accent); }
+.deck-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 6px; overflow: hidden; background: #fff; }
+.deck-frame img { width: 100%; height: 100%; object-fit: contain; user-select: none; -webkit-user-drag: none; }
+.deck-nav {
+  flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border-strong);
+  background: rgba(11, 13, 16, .78); color: var(--text); font-size: 1.1rem; line-height: 1;
+  cursor: pointer; display: grid; place-items: center; transition: background .15s, opacity .15s;
+}
+.deck-nav:hover { background: var(--surface-2); }
+.deck-nav:disabled { opacity: .3; cursor: default; }
+.deck-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 4px 2px; font-size: .85rem; color: var(--text-2); }
+.deck-bar .deck-title { color: var(--text); font-weight: 500; }
+.deck-bar .deck-count { font-family: var(--font-mono); font-size: .78rem; color: var(--muted); white-space: nowrap; min-width: 3.2em; text-align: center; }
+.deck-tools { display: flex; gap: 8px; align-items: center; }
+.deck-tools .btn { padding: 7px 12px; font-size: .82rem; }
+.deck-thumbs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-top: 12px; padding: 0; list-style: none; }
+.deck-thumbs button {
+  display: block; width: 100%; padding: 0; border: 1px solid var(--border); border-radius: 6px; overflow: hidden;
+  background: #fff; cursor: pointer; opacity: .55; transition: opacity .15s, border-color .15s;
+}
+.deck-thumbs button:hover { opacity: .85; }
+.deck-thumbs button[aria-current="true"] { opacity: 1; border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.deck-thumbs img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.deck:fullscreen, .deck.is-full { background: var(--bg); padding: 24px; display: flex; flex-direction: column; justify-content: center; }
+.deck:fullscreen .deck-frame { max-height: calc(100vh - 170px); aspect-ratio: auto; height: calc(100vh - 170px); background: transparent; }
+@media (max-width: 640px) {
+  .deck-stage { padding: 8px; }
+  .deck-thumbs { gap: 6px; }
+  .deck-bar .deck-title { display: none; }
+  .deck-bar { justify-content: center; }
+  .deck-tools { flex-wrap: wrap; justify-content: center; }
+}

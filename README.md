@@ -8,7 +8,6 @@ Personal finance portfolio covering credit analysis, equity valuation and financ
 ```
 index.html                      Home: hero, about, project cards (filterable), skills, contact
 projects/
-  ford-credit-analysis.html     Sample credit memo (Ford Motor Co.)
   project-template.html         Copy this to start a new project page
 assets/
   css/style.css                 All styling; colors and fonts are tokens at the top (:root)
@@ -30,8 +29,8 @@ Search the project for `[` placeholders and replace them:
 1. Copy `projects/project-template.html` to a new file, e.g. `projects/apple-dcf.html`.
 2. Edit the title, tag (`tag-credit`, `tag-equity` or `tag-model`), sections and sources.
    Remove the `noindex` meta line.
-3. In `index.html`, replace one of the dashed placeholder cards with a real card linking to it.
-   The card's `data-category` (`credit`, `equity` or `model`) controls which filter shows it.
+3. In `index.html`, replace one of the dashed "Coming soon" cards with a real card linking to it
+   (an `<a class="card" href="projects/your-page.html">` with a tag, title, description and metrics).
 
 ### Charts
 
