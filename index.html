@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[Your Name] · Finance Portfolio</title>
+  <meta name="description" content="Credit analysis, equity valuation and financial modeling projects by [Your Name].">
+  <meta name="theme-color" content="#0b0d10">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">[Your Name]<span>_</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="container">
+        <span class="eyebrow">Finance portfolio</span>
+        <h1>Credit, valuation &amp; modeling, shown in full.</h1>
+        <p class="lede">
+          I'm [Your Name], a [Major] student at [School]. This is a collection of independent
+          analyses: credit memos, equity research and financial models, built from primary filings
+          with the work shown.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View projects →</a>
+          <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        </div>
+        <div class="ticker" aria-label="Quick facts">
+          <span>FOCUS <b>Credit · Lev Fin · Equity Research</b></span>
+          <span>PROJECTS <b>1 published · 2 in progress</b></span>
+          <span>CLASS OF <b>[Year]</b></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div>
+          <span class="eyebrow">About</span>
+          <h2>Fundamentals first.</h2>
+          <p>
+            [Two or three sentences about you. What draws you to finance, what kind of analysis you
+            enjoy most, and what you're working toward. e.g. "I'm interested in how companies fund
+            themselves and what happens when that funding comes under stress."]
+          </p>
+          <p>
+            [A sentence about experience: internships, investment clubs, case competitions,
+            or coursework that shaped how you approach a company.]
+          </p>
+        </div>
+        <ul class="facts">
+          <li><span>School</span><span>[School]</span></li>
+          <li><span>Major</span><span>[Major / Concentration]</span></li>
+          <li><span>Graduating</span><span>[Month Year]</span></li>
+          <li><span>Interests</span><span>[e.g. Credit research, Leveraged finance]</span></li>
+          <li><span>Seeking</span><span>[e.g. Summer 2027 analyst internship]</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Projects</span>
+            <h2>Selected work</h2>
+          </div>
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button class="chip" data-filter="all" aria-pressed="true">All</button>
+            <button class="chip" data-filter="credit" aria-pressed="false">Credit analysis</button>
+            <button class="chip" data-filter="equity" aria-pressed="false">Equity / valuation</button>
+            <button class="chip" data-filter="model" aria-pressed="false">Financial modeling</button>
+          </div>
+        </div>
+
+        <div class="grid">
+          <!-- Published project -->
+          <a class="card" href="projects/ford-credit-analysis.html" data-category="credit">
+            <div class="card-top">
+              <span class="tag tag-credit">Credit analysis</span>
+              <span class="date">Nov 2026</span>
+            </div>
+            <h3>Ford Motor Co.: Credit Memo</h3>
+            <p>
+              Fundamental credit review of Ford's automotive business after the 2025 tariff, supplier-fire and EV-reset shocks: leverage, liquidity, Ford Credit, and why one S&amp;P notch matters more than usual.
+            </p>
+            <div class="card-metrics">
+              <div><b>BBB- / Ba1</b><small>S&amp;P / Moody's</small></div>
+              <div><b>$46.4B</b><small>Liquidity</small></div>
+              <div><b>2.3x</b><small>Debt / EBITDA</small></div>
+            </div>
+            <span class="card-cta">Read memo →</span>
+          </a>
+
+          <!-- Placeholder: copy projects/project-template.html to publish -->
+          <div class="card placeholder" data-category="equity">
+            <div class="card-top">
+              <span class="tag tag-equity">Equity / valuation</span>
+              <span class="date">In progress</span>
+            </div>
+            <h3>[Company]: Initiation &amp; DCF</h3>
+            <p>
+              Equity research initiation with a three-scenario DCF, trading comps and a price target.
+              Replace this card when the project is ready.
+            </p>
+            <div class="card-metrics">
+              <div><b>—</b><small>Price target</small></div>
+              <div><b>—</b><small>Upside</small></div>
+              <div><b>—</b><small>Rating</small></div>
+            </div>
+          </div>
+
+          <div class="card placeholder" data-category="model">
+            <div class="card-top">
+              <span class="tag tag-model">Financial modeling</span>
+              <span class="date">In progress</span>
+            </div>
+            <h3>[Target]: LBO Model</h3>
+            <p>
+              Paper-to-full LBO: sources &amp; uses, debt schedule with cash sweep, returns
+              sensitivity (IRR / MOIC) and a downloadable Excel model.
+            </p>
+            <div class="card-metrics">
+              <div><b>—</b><small>Entry multiple</small></div>
+              <div><b>—</b><small>IRR</small></div>
+              <div><b>—</b><small>MOIC</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Toolkit</span>
+            <h2>Skills</h2>
+          </div>
+        </div>
+        <div class="skills">
+          <div class="skill">
+            <h3>Credit analysis</h3>
+            <ul>
+              <li>Leverage &amp; coverage analysis</li>
+              <li>Liquidity &amp; maturity profiles</li>
+              <li>Capital structure &amp; recovery</li>
+              <li>Rating methodology</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3>Valuation</h3>
+            <ul>
+              <li>DCF (UFCF, WACC)</li>
+              <li>Trading &amp; transaction comps</li>
+              <li>Sum-of-the-parts</li>
+              <li>Investment thesis writing</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3>Modeling</h3>
+            <ul>
+              <li>Three-statement models</li>
+              <li>LBO &amp; debt schedules</li>
+              <li>M&amp;A accretion / dilution</li>
+              <li>Scenario &amp; sensitivity analysis</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3>Tools</h3>
+            <ul>
+              <li>Excel / PowerPoint</li>
+              <li>[Bloomberg / CapIQ / FactSet]</li>
+              <li>[Python / SQL]</li>
+              <li>SEC EDGAR filings</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h2>Let's talk.</h2>
+        <p>Open to internship and analyst opportunities in credit, leveraged finance and research.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:[your.email@example.com]">Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/[your-handle]" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/tobelin1201" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© <span data-year>2026</span> [Your Name]</span>
+      <span>Independent analysis for educational purposes. Not investment advice.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

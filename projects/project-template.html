@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 1. Copy this file, rename it (e.g. apple-dcf.html), and edit the title/description -->
+  <title>[Project Title] · [Your Name]</title>
+  <meta name="description" content="[One-sentence summary of the project]">
+  <meta name="theme-color" content="#0b0d10">
+  <meta name="robots" content="noindex"><!-- remove this line on real project pages -->
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html">[Your Name]<span>_</span></a>
+      <ul class="nav-links nav-simple">
+        <li><a href="../index.html#projects">All projects</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="memo-head">
+      <a class="back" href="../index.html#projects">← All projects</a>
+      <!-- 2. Pick a tag: tag-credit / tag-equity / tag-model -->
+      <span class="tag tag-equity">Equity / valuation</span>
+      <h1 style="margin-top:16px">[Project Title]</h1>
+      <p class="muted" style="max-width:60ch">[Subtitle: the one-line thesis]</p>
+      <div class="memo-meta">
+        <span>TICKER <b>[XXX]</b></span>
+        <span>DATE <b>[Mon YYYY]</b></span>
+        <span>DATA AS OF <b>[FY / quarter]</b></span>
+      </div>
+    </div>
+
+    <div class="memo-layout">
+      <nav class="toc" aria-label="On this page">
+        <p>On this page</p>
+        <ol>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#analysis">Analysis</a></li>
+          <li><a href="#sources">Sources</a></li>
+        </ol>
+      </nav>
+
+      <article class="memo">
+        <section id="summary">
+          <h2>Summary</h2>
+          <div class="verdict">
+            <span class="eyebrow">Recommendation</span>
+            <h3>[Buy / Hold / Sell · or credit view]</h3>
+            <p>[Two to three sentences with the core argument.]</p>
+          </div>
+          <div class="stats">
+            <div class="stat"><span class="label">[Metric]</span><span class="value">[Value]</span><span class="sub">[context]</span></div>
+            <div class="stat"><span class="label">[Metric]</span><span class="value">[Value]</span><span class="sub">[context]</span></div>
+            <div class="stat"><span class="label">[Metric]</span><span class="value">[Value]</span><span class="sub">[context]</span></div>
+          </div>
+        </section>
+
+        <section id="analysis">
+          <h2>Analysis</h2>
+          <p>[Body text.]</p>
+
+          <!-- Example chart: delete or edit -->
+          <div class="chart-card">
+            <h4>[Chart title]</h4>
+            <p class="chart-sub">[Units, source]</p>
+            <div class="chart" id="example-chart"></div>
+          </div>
+
+          <!-- Example table -->
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>$ billions</th><th>FY1</th><th>FY2</th><th>FY3</th></tr></thead>
+              <tbody>
+                <tr><td>Revenue</td><td>100.0</td><td>110.0</td><td>120.0</td></tr>
+                <tr class="total"><td>EBITDA</td><td>20.0</td><td>22.0</td><td>25.0</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="sources" class="sources">
+          <h2>Sources</h2>
+          <ol>
+            <li>[Company 10-K, FY20XX]: <a href="#">link</a></li>
+          </ol>
+          <p class="note">Independent analysis for educational purposes only. Not investment advice.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© <span data-year>2026</span> [Your Name]</span>
+      <a href="../index.html">Back to portfolio</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script>
+    Charts.bar('#example-chart', {
+      categories: ['FY1', 'FY2', 'FY3'],
+      series: [{ name: 'Revenue', values: [100, 110, 120], color: 'var(--series-1)' }],
+      format: (v) => '$' + v + 'B',
+      valueLabels: true,
+    });
+  </script>
+</body>
+</html>
